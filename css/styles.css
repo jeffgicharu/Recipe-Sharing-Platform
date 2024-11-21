@@ -35,3 +35,12 @@ h2{
 h3{
     font-size: 1.5rem;
 }
+
+/* Layout */
+.container{
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 1rem;
+}
+
