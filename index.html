@@ -3,62 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Expense Tracker</title>
+    <title>Recipe Sharing Platform</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Personal Expense Tracker</h1>
-        
-        <div class="balance-summary">
-            <h2>Balance Summary</h2>
-            <p>Total Income: <span id="totalIncome">$0</span></p>
-            <p>Total Expenses: <span id="totalExpenses">$0</span></p>
-            <p>Remaining Balance: <span id="remainingBalance">$0</span></p>
-        </div>
-        
-        <div class="transaction-form">
-            <h2>Add Transaction</h2>
-            <form id="transactionForm">
-                <input type="number" id="amount" placeholder="Amount" required>
-                <select id="type" required>
-                    <option value="income">Income</option>
-                    <option value="expense">Expense</option>
-                </select>
-                <select id="category" required>
-                    <option value="salary">Salary</option>
-                    <option value="food">Food</option>
-                    <option value="transportation">Transportation</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="utilities">Utilities</option>
-                    <option value="other">Other</option>
-                </select>
-                <button type="submit">Add Transaction</button>
-            </form>
-        </div>
-        
-        <div class="transaction-history">
-            <h2>Transaction History</h2>
-            <table id="transactionTable">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Amount</th>
-                        <th>Type</th>
-                        <th>Category</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="transactionBody"></tbody>
-            </table>
-        </div>
-        
-        <div class="expense-chart">
-            <h2>Expense Breakdown</h2>
-            <canvas id="expenseChart"></canvas>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Recipe Sharing Platform Logo">
+                <h1>Recipe Sharing Platform</h1>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="submit-recipe.html">Submit Recipe</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Discover and Share Amazing Recipes</h2>
+                <p>Join our community of food lovers and explore delicious recipes from around the world.</p>
+                <a href="recipes.html" class="btn">Explore Recipes</a>
+            </div>
+        </section>
+        <section class="featured-recipes">
+            <h2>Featured</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <img src="images/creamy-garlic-pasta.png" alt="Creamy Garlic Pasta">
+                    <h3>Delicious Pasta</h3>
+                    <p>A quick and easy pasta dish perfect for weeknight dinners.</p>
+                    <a href="#" class="btn">View Recipes</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/cake.png" alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich and moist chocolate cake for special occassions.</p>
+                    <a href="#" class="btn">View Recipes</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/stir-fry.png" alt="Vegetable Stir Fry">
+                    <h3>Vegetable Stir Fry</h3>
+                    <p>A healthy and flavorful stir fry with a variety of vegetables.</p>
+                    <a href="#" class="btn">View Recipes</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/summer-salad.png" alt="Summer Salad">
+                    <h3>Summer Salad</h3>
+                    <p>A refreshing salad perfect for warm weather.</p>
+                    <a href="#" class="btn">View Recipes</a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
