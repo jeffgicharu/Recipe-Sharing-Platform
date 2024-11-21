@@ -3,66 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasty Recipes - Discover and Share Delicious Recipes</title>
+    <title>Personal Expense Tracker</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Tasty Recipes</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <h1>Personal Expense Tracker</h1>
+        
+        <div class="balance-summary">
+            <h2>Balance Summary</h2>
+            <p>Total Income: <span id="totalIncome">$0</span></p>
+            <p>Total Expenses: <span id="totalExpenses">$0</span></p>
+            <p>Remaining Balance: <span id="remainingBalance">$0</span></p>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Discover and Share Delicious Recipes</h2>
-                <a href="recipes.html" class="cta-button">Explore Recipes</a>
-            </div>
-        </section>
-        <section class="featured-recipes">
-            <div class="container">
-                <h2>Featured Recipes</h2>
-                <div class="recipe-grid">
-                    <article class="recipe-card">
-                        <img src="images/creamy-garlic-pasta.png" alt="Creamy Garlic Pasta">
-                        <h3>Creamy Garlic Pasta</h3>
-                        <p>A delicious Italian-inspired pasta dish</p>
-                        <a href="recipe-detail.html" class="button">View Recipe</a>
-                    </article>
-                    <article class="recipe-card">
-                        <img src="images/summer-salad.png" alt="Summer Salad">
-                        <h3>Summer Salad</h3>
-                        <p>Fresh and light salad perfect for hot days</p>
-                        <a href="recipe-detail.html" class="button">View Recipe</a>
-                    </article>
-                    <article class="recipe-card">
-                        <img src="images/vegetable-soup.png" alt="Hearty Vegetable Soup">
-                        <h3>Hearty Vegetable Soup</h3>
-                        <p>Comforting soup packed with vegetables</p>
-                        <a href="recipe-detail.html" class="button">View Recipe</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer id="contact">
-        <div class="container">
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
-                <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
-                <a href="#" aria-label="Pinterest"><i class="icon-pinterest"></i></a>
-            </div>
-            <p>&copy; 2024 Tasty Recipes - All Rights Reserved</p>
+        
+        <div class="transaction-form">
+            <h2>Add Transaction</h2>
+            <form id="transactionForm">
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <select id="category" required>
+                    <option value="salary">Salary</option>
+                    <option value="food">Food</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
         </div>
-    </footer>
+        
+        <div class="transaction-history">
+            <h2>Transaction History</h2>
+            <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionBody"></tbody>
+            </table>
+        </div>
+        
+        <div class="expense-chart">
+            <h2>Expense Breakdown</h2>
+            <canvas id="expenseChart"></canvas>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
