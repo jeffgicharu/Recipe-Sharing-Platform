@@ -1,51 +1,56 @@
 /* Reset and base styles */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 1rem;
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
 }
 
-h2{
+h2 {
     font-size: 2rem;
 }
 
-h3{
+h3 {
     font-size: 1.5rem;
 }
 
 /* Layout */
-.container{
-   width: 90%;
-   max-width: 1200px;
-   margin: 0 auto;
-   padding: 1rem;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 /* Header and Navigation */
-header{
+header {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -53,43 +58,43 @@ header{
     z-index: 1000;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
 
-.logo img{
+.logo img {
     width: 40px;
     margin-right: 0.5rem;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     list-style: none;
 }
 
-.nav-links li{
+.nav-links li {
     margin-left: 1.5rem;
 }
 
-.nav-toggle{
+.nav-toggle {
     display: none;
 }
 
-.nav-toggle-label{
+.nav-toggle-label {
     display: none;
     cursor: pointer;
 }
 
 /* Hero Section */
-.hero{
+.hero {
     background-image: url('../images/hero-bg.png');
     background-size: cover;
     background-position: center;
@@ -98,18 +103,18 @@ header{
     padding: 4rem 1rem;
 }
 
-.hero-content{
+.hero-content {
     max-width: 600px;
     margin: 0 auto;
 }
 
-.hero h2{
+.hero h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 /* Buttons */
-.btn{
+.btn {
     display: inline-block;
     background-color: #4CAF50;
     color: #fff;
@@ -121,39 +126,71 @@ header{
     transition: background-color 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #45a049;
 }
 
 /* Recipe Grid */
-.recipe-grid{
+.recipe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     padding: 2rem 1rem;
 }
 
-.recipe-card:hover{
+.recipe-card:hover {
     transform: translateY(-5px);
 }
 
-.recipe-card img{
+.recipe-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.recipe-card h3{
+.recipe-card h3 {
     padding: 1rem;
 }
 
-.recipe-card p{
+.recipe-card p {
     padding: 0 1rem 1rem;
 }
 
-.recipe-card .btn{
+.recipe-card .btn {
     display: block;
     text-align: center;
     margin: 1rem;
+}
+
+/* Forms */
+.recipe-form,
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.form-group{
+    margin-bottom: 1.5rem;
+}
+
+label{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="file"]{
+   margin-top: 0.5rem;
 }
