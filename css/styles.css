@@ -44,3 +44,46 @@ h3{
    padding: 1rem;
 }
 
+/* Header and Navigation */
+header{
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 40px;
+    margin-right: 0.5rem;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li{
+    margin-left: 1.5rem;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    display: none;
+    cursor: pointer;
+}
